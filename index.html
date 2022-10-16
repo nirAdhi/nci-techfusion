@@ -289,18 +289,44 @@
 	</section><!--/#sponsor-->
 
 	<section id="contact">
-		<div id="m"></div>
+		<div id="m1" style="width:402px;height:303px;"></div>
+		<br>
+		<div id="m2" style="width:402px;height:303px;"></div>
+		<br>
+		<div id="m3" style="width:402px;height:303px;"></div>
+		<br>
+		<div id="m4" style="width:402px;height:303px;"></div>
 		<script>
-			function initMap() {
-				var loc = {lat: -26.334, lng: 132.034};
-				var m1 = new google.maps.Map(
-					document.getElementById('m'), {zoom: 3, center: loc});
-				var mar = new google.maps.Marker({position: loc, map: m1});
+			function sample() {
+				var choice1 = {
+					center: new google.maps.LatLng(51.503442,-0.120540),
+					zoom:7,
+					mapTypes: google.maps.MapTypeId.ROADMAP
+				};
+				var choice2 = {
+					center: new google.maps.LatLng(51.503442,-0.120540),
+					zoom:7,
+					mapTypes: google.maps.MapTypeId.SATELLITE
+				};
+				var choice3 = {
+					center: new google.maps.LatLng(51.503442,-0.120540),
+					zoom:7,
+					mapTypes: google.maps.MapTypeId.HYBRID
+				};
+				var choice4 = {
+					center: new google.maps.LatLng(51.503442,-0.120540),
+					zoom:7,
+					mapTypes: google.maps.MapTypeId.TERRAIN
+				};
+				var i = new google.maps.Map(document.getElementById("m1"),choice1);
+				var j = new google.maps.Map(document.getElementById("m2"),choice2);
+				var k = new google.maps.Map(document.getElementById("m3"),choice3);
+				var l = new google.maps.Map(document.getElementById("m4"),choice4);
 			}
 		</script>
-		<script async defer
-			src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=sample">
 		</script>
+
 
 		<div class="contact-section">
 			<div class="ear-piece">
