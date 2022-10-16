@@ -289,12 +289,20 @@
 	</section><!--/#sponsor-->
 
 	<section id="contact">
-		<div id="map">
-			<div id="gmap-wrap">
-	 			<div id="gmap"> 				
-	 			</div>	 			
-	    	</div>
-		</div><!--/#map-->
+		<div id="m" style="width:402px;height:433px;background:green"></div>
+		<script>
+			function sample() 
+			{
+				var m1 = {
+					center: new google.maps.LatLng(52.3, -0.14),
+					zoom: 13,
+					mapss: google.maps.MapTypeId.HYBRID
+				} 
+				var m2 = new google.maps.Map(document.getElementById("m"), m1);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=sample"></script>
+
 		<div class="contact-section">
 			<div class="ear-piece">
 				<img class="img-responsive" src="images/ear-piece.png" alt="">
